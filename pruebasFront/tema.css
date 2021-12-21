@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(67, 110, 124);
+}
+#identificador{
+    color: red;
+}
+
+.conclase{
+    color:yellow;
+}
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+
+p{
+    color:blue;
+}
+
+.formulario p{
+color:magenta;
+}
+
+.formulario h1{
+    font-family:italic;
+    }
