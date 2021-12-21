@@ -1,0 +1,39 @@
+body{
+
+    
+    background-color: rgb(67, 110, 124);
+}
+
+    .header{
+
+        background-color:  rgb(16, 44, 53);
+           }
+
+    .header > img{
+
+        width: 100px;
+        height: 100px;
+    }
+
+    .flex-container {
+        display: flex;
+        background-color:  rgb(67, 110, 124);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .flex-container > section {
+        margin: 10px;
+        padding: 20px;
+      }
+
+      .foot{
+        background-color: black;
+        color: white;
+        align-items: stretch;
+      }
+
+    
