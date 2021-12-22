@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzas</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header class="header">
         <h1>Pizzeria</h1>
-        <img src="logoPizza.png" alt="logo de la empresa">
+        <img src="C:\Users\jsanch24\proyecto\pizzeria\src\main\resources\templates\images" alt="logo de la empresa">
       </header>
-      <main class="flexbox">
-          <header> Nuestras Pizzas caseras</header>
+      <main >
+          <header>
+              <h1>Nuestras Pizzas caseras</h1> 
+
+          </header>
+
+          <div class="flex-container">
 
           <div class="pizza">
-            <img src="images/barbacoa.png" alt=""> 
+            <img src="C:\Users\jsanch24\proyecto\pizzeria\src\main\resources\templates\images" alt="imagen de la pizza barbacoa"> 
             <h2>Barbacoa</h2>
             <p>Salsa barbacoa, carne, cebolla roja y bacon.</p>
             <h3>Precio:</h3>
@@ -24,7 +30,7 @@
         </div> 
             
          <div class="pizza">
-            <img src="" alt=""> 
+            <img src="C:\Users\jsanch24\proyecto\pizzeria\src\main\resources\templates\images" alt="imagen de la pizza carbonara"> 
             <h2>Carbonara</h2>
             <p>Salsa carbonara, jamón de York, champiñones y cebolla roja.</p>
             <h3>Precio:</h3>
@@ -33,22 +39,26 @@
         </div>
             
         <div class="pizza">
-            <img src="" alt=""> 
-            <h2>CuatroQuesos</h2>
-            <p>Salsa de tomate y mezcla de 4 quesos: mozzarella, queso azul, cheddar y emmental.</p>
+            <img src="/images/cuatroquesos.png" alt="imagen de la pizza cuatroquesos"> 
+            <h2>Cuatroquesos</h2>
+            <p>Mezcla de 4 quesos: mozzarella, queso azul, cheddar y emmental.</p>
             <h3>Precio:</h3>
             <button>Comentarios</button>
 
         </div>
+   
            
         <div class="pizza">
-                <img src="" alt=""> 
+                <img src="C:\Users\jsanch24\proyecto\pizzeria\src\main\resources\templates\images/americana.png" alt="imagen de la pizza americana"> 
                 <h2>Americana</h2>
                 <p>Salsa de tomate, queso mozzarella, bacon, cebolla roja y pepperoni.</p>
+                <h3>Precio:</h3>
+                <button>Comentarios</button>
+    
                 </div> 
                 
         <div class="pizza">
-                <img src="" alt=""> 
+                <img src="/images/hawaiana.png" alt="imagen de la pizza hawaiana"> 
                 <h2>Hawaiana</h2>
                 <p>Salsa de tomate, queso mozzarella, piña y doble de jamón york.</p>
                 <h3>Precio:</h3>
@@ -57,7 +67,7 @@
         </div>
                 
         <div class="pizza">
-                <img src="" alt=""> 
+                <img src="/images/margarita.png" alt="imagen de la pizza margarita"> 
                 <h2>Margarita</h2>
                 <p>Salsa de tomate y mozzarella.</p>
                 <h3>Precio:</h3>
@@ -65,13 +75,17 @@
 
         </div>
 
+    </div>
+
       </main>
       
       
       <footer class="foot">
         <nav>
             <a href="">Aviso legal</a>
+            <br>
             <a href="">Corporativo</a>
+            <br>
             <a href="">Ayuda y Pedidos</a>
 
         </nav>   
