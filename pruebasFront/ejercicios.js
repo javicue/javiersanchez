@@ -103,15 +103,42 @@ function adivinaNumero(num) {
     this.numero = num;
     var aleatorio = function numeroAleatorio() {
         return Math.random() * (100 - 0) + 0;
-    this.muestraId = function() {
-    alert("El ID del objeto es " + this.id);
+    this.comparar = function() {
+        if ( numeroEntrada < x){
+            return console.log("tu número es menor");
+        }else if(numero = x){
+            return console.log("tu número es igual");
+        }else{
+            return console.log("tu número es mayor");
+        }
+    
     }
-    this.ponNombre = function(nom) {
-    this.nombre=nom.toUpperCase();
     }
     }
     var num = console.log("escribe un número");
     var y = new adivinaNumero("num");
+
+    class adivinaNumero {
+        constructor(num) 
+        { this.numero=num; }
+        
+        comparar(numero) {
+            var aleatorio = function numeroAleatorio() {
+                return Math.random() * (100 - 0) + 0;
+                
+                if ( numero < aleatorio){
+                    return console.log("tu número es menor");
+                }else if(numero = aleatorio){
+                    return console.log("tu número es igual");
+                }else{
+                    return console.log("tu número es mayor");
+                }
+        
+          }
+        }
+      }
+      let num = promt ("escribe un número");
+      let intento = new adivinaNumero(num);
 
 
 
