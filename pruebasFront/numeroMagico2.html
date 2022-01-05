@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Adivina el numero</title>
+
+    <link rel="stylesheet" href="numeroMagico.css">
+  </head>
+
+  <body>
+    <h1> Juego del Numero Magico</h1>
+
+    <p>Hemos seleccionado un numero aleatorio entre 1 y 100. Intenta adivinarlo en 10 intentos o menos. Te indicaremos si tu numero es menor o mayor.</p>
+
+    <div class="form">
+      <label for="guessField">Introduce tu numero: </label>
+      <input type="text" id="numeroIntroducido">
+      <button type="button"  onclick="juegoDelNumero()">comprobar</button>
+      <p id="demo">resultado:</p>
+    </div>
+
+
+    <script>
+
+ function JuegoDelNumero() {
+    var numeroBuscado = Math.floor(Math.random() * 100) + 1;
+    var numeroIntroducido;
+    var intentos = 0;
+    var encontrado = false;
+    do {
+        intentos += 1;
+        numeroIntroducido = document.getElementById("numeroIntroducido").value;
+        
+        if (numeroBuscado === numeroIntroducido) {
+            encontrado = true;
+            break;
+        } else if (numeroBuscado > numeroIntroducido) {
+            alert('Mi número es mayor.');
+        } else {
+            alert('Mi número es menor.');
+        }
+    } while (intentos < 10);
+    if (encontrado) {
+        document.getElementById("demo").innerHTML= resultado + "Bieeen!!! Acertaste.";
+        
+    } else {
+        document.getElementById("demo").innerHTML="Upsss! Se acabaron los intentos, el número era el" + numeroBuscado;
+    }
+    return encontrado;
+}
+    </script>
+  </body>
+</html>

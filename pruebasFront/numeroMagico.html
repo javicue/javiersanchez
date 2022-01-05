@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Adivina el numero</title>
+
+    <link rel="stylesheet" href="numeroMagico.css">
+  </head>
+
+  <body>
+    <h1>Numero Magico</h1>
+
+    <p>Hemos seleccionado un numero aleatorio entre 1 y 100. Intenta adivinarlo en 10 intentos o menos. Te indicaremos si tu numero es menor o mayor.</p>
+
+    <div class="form">
+      <label for="guessField">Introduce un numero: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="enviar Respuesta" class="enviarRespusta">
+    </div>
+
+    <div class="resultParas">
+      <p class="intentos"></p>
+      <p class="ultimoResultado"></p>
+      <p class="bajooalto"></p>
+    </div>
+
+    <script>
+
+let  numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+const intentos = document.querySelector('.intentos');
+const ultimoResultado = document.querySelector('.ultimoResultado');
+const bajooalto = document.querySelector('.bajooalto');
+
+const  enviarRespuesta = document.querySelector('.enviarRespuesta');
+const guessField = document.querySelector('.guessField');
+
+let  contador = 1;
+let resetButton;
+
+function revisarIntento () {
+  let userGuess = Number(guessField.value);
+  if ( contador === 1) {
+    intentos.textContent = 'Intentos anteriores: ';
+  }
+  intentos.textContent += userGuess + ' ';
+
+  if (userGuess ===  numeroAleatorio) {
+    ultimoResultado.textContent = '¡Lo adivinaste!';
+    ultimoResultado.style.backgroundColor = 'green';
+    bajooalto.textContent = '';
+    finalizado();
+  } else if ( contador === 10) {
+    ultimoResultado.textContent = '!!!Fin del juego!!!';
+    finalizado();
+  } else {
+    ultimoResultado.textContent = '¡Incorrecto!';
+    ultimoResultado.style.backgroundColor = 'red';
+    if(userGuess <  numeroAleatorio ) {
+        bajooalto.textContent = '¡El número es muy bajo!';
+    } else if(userGuess >  numeroAleatorio ) {
+        bajooalto .textContent = '¡El número es muy grande!';
+    }
+  }
+
+  contador++;
+  guessField.value = '';
+  guessField.focus();
+}
+
+guessSubmit.addEventListener('click', revisarIntento);
+
+function  finalizado() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = 'Iniciar nuevo juego';
+  document.body.append(resetButton);
+  resetButton.addEventListener('click', resetGame);
+}
+
+function resetGame() {
+  contador = 1;
+
+  const resetParas = document.querySelectorAll('.resultParas p');
+  for (let i = 0 ; i < resetParas.length ; i++) {
+    resetParas[i].textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+
+  ultimoResultado.style.backgroundColor = 'white';
+
+  numeroAleatorio  = Math.floor(Math.random() * 100) + 1;
+}
+    </script>
+  </body>
+</html>
