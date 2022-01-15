@@ -1,0 +1,102 @@
+
+:root{
+  --backcombing: #436E7C;
+  --blackhead: #88708a;
+  --blackfoot:#000000;
+  --whiteword:#FFFDFF;
+}
+
+body { background-color: var(--backcombing); }
+
+header { background-color: var(--blackhead);
+         text-align: center; }
+
+    .header > img{
+        border-radius: 25px;
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .flex-container {
+        display: flex;
+        background-color: var(--backcombing);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+      
+      .flex-container > article {
+        background-color: #f1f1f1;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+
+
+      aside {
+        width: 30%;
+        padding-left: 15px;
+        margin-left: 15px;
+        float: left;
+        background-color: lightgray;
+      }
+
+foot{
+    background-color: var(--blackfoot);
+    color: var(--whiteword);
+    align-items: stretch;
+    margin-top: 40px;
+    padding: 40px;
+      }
+      
+
+
+      /* estilo para los artículos */
+      
+      .browser {
+        background: white;
+        border-radius: 20px;
+      }
+      
+      .browser > h2, p {
+        margin: 4px;
+        font-size: 120%;
+      }
+
+      .menu> nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu> button {
+        padding: 8px;
+        margin-bottom: 7px;
+        background-color: #33b5e5;
+        color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+      
+      .menu> button:hover {
+        background-color: #0099cc;
+      }  
+      .navegate{
+        
+          display: flex;
+          flex-flow: row wrap;
+          background-color: black;
+          color: white;
+          padding: 10px;
+          align-items: stretch;
+          position: sticky;
+          top: 0;
+      }
+      
+      
