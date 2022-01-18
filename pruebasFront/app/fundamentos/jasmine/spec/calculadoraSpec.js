@@ -165,12 +165,84 @@ describe('Multiplicaciones', () => {
             
             });
 
+    describe ("pruebas dinamicas", () =>{
+        describe('sumas', function(){
+            [[2,3,5],[3,6,9],[2,-1,1]].forEach(item =>{
+                it('Prueba  que ${item[0]} más ${item[1] es
+                    ${item[2]}', () => expect(calc.mas(item[0], 
+                        item[1])).toBe(item[2])
+                )
+            });
+        });
+        describe('restas', function(){
+            [[4,3,1],[7,2,5],[2,-1,1]].forEach(item =>{
+                it('Prueba  que ${item[0]} menos ${item[1] es
+                    ${item[2]}', () => expect(calc.resta(item[0], 
+                        item[1])).toBe(item[2])
+                )
+            });
+        });
+        describe('multiplicaciones', function(){
+            [[2,3,6],[3,6,18],[2,6,12]].forEach(item =>{
+                it('Prueba  que ${item[0]} entre ${item[1] es
+                    ${item[2]}', () => expect(calc.multiplicacion(item[0], 
+                        item[1])).toBe(item[2])
+                )
+            });
+        });
+        describe('divisiones', function(){
+            [[6,3,2],[8,4,2],[10,2,5]].forEach(item =>{
+                it('Prueba  que ${item[0]} entre ${item[1] es
+                    ${item[2]}', () => expect(calc.division(item[0], 
+                        item[1])).toBe(item[2])
+                )
+            });
+        });
+    })
+
+    it('Multiplica', () => {
+        let calc = { multiplica: (a, b) => 4 };
+
+       expect(4).toBe(calc.multiplica(5,5));
+    })
+    
+
+    
+
             //probar luego espias usando comparadores
 
-            beforeEach(function(){
-                funcion = spyOn(calculadora,'suma');
-                prop = spyOnProperty(calculadora,'pantalla', 'set')
-            });
+           
+        describe('Doble', () => {
+
+            it('Spy', () => {
+                let func = spyOn(calc,'suma').and.returnValue(3);
+                let rslt = calc.suma(2,2);
+                expect(func).toHaveBeenCalled();
+                expect(3).toBe(rslt);
+            })
+            
+            it('Spy', () => {
+                let func = spyOn(calc,'resta').and.returnValue(3);
+                let rslt = calc.resta(2,2);
+                expect(func).toHaveBeenCalled();
+                expect(3).toBe(rslt);
+            })
+            
+            it('Spy', () => {
+                let func = spyOn(calc,'division').and.returnValue(3);
+                let rslt = calc.division(2,2);
+                expect(func).toHaveBeenCalled();
+                expect(3).toBe(rslt);
+            })
+            
+            it('Spy', () => {
+                let func = spyOn(calc,'multiplicacion').and.returnValue(3);
+                let rslt = calc.multiplicacion(2,2);
+                expect(func).toHaveBeenCalled();
+                expect(3).toBe(rslt);
+            })
+
+        })
 
    
     })
